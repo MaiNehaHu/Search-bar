@@ -4,9 +4,10 @@ body {
 }
 h1 {
   text-decoration: underline;
-  font-family: 'Righteous', cursive;
+  font-family: "Righteous", cursive;
   font-weight: bolder;
   font-size: 50px;
+  text-align: center;
   display: flex;
   justify-content: center;
 }
@@ -29,8 +30,8 @@ h1 {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
 }
-.user-cards> li{
-    list-style: none;
+.user-cards > li {
+  list-style: none;
 }
 .card {
   color: white;
@@ -45,13 +46,43 @@ h1 {
   justify-content: center;
 }
 .header {
+  text-align: center;
   font-size: x-large;
-  font-family: 'Chakra Petch', sans-serif;
+  font-family: "Chakra Petch", sans-serif;
 }
-.body{
-    font-family: 'Fasthand', cursive;
-    font-size: large;
+.body {
+  text-align: center;
+  font-family: "Fasthand", cursive;
+  font-size: large;
+  letter-spacing: 0.1rem;
 }
 .hide {
   visibility: hidden;
+}
+
+@media screen and (max-width: 700px)and (min-width: 200px) {
+  h1 {
+    font-size: 28px;
+    text-align:center
+  }
+  .user-cards {
+    display: grid;
+    padding: 0 0 0;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    height: max-content;
+  }
+  .card {
+    margin: 1rem 1rem 1rem;
+    padding: 0.5rem 1.2rem 0.5rem;
+
+    border-radius: 0.5rem;
+  }
+  .header {
+    font-size: large;
+  }
+  .body {
+    word-wrap: break-word;
+    font-size: medium;
+    letter-spacing: 0.1rem;
+  }
 }
